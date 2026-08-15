@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KQ Support AI | Kenya Airways Centralized Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="logo-icon">KQ</div>
+                <h2>KQ Support AI</h2>
+            </div>
+            
+            <div class="nav-section">
+                <h3>Quick Assist</h3>
+                <button class="prompt-btn" data-prompt="What are the baggage allowance limits for international flights?">
+                    🧳 Baggage Allowance
+                </button>
+                <button class="prompt-btn" data-prompt="How do I change my flight booking date?">
+                    ✈️ Booking Changes
+                </button>
+                <button class="prompt-btn" data-prompt="What is the process for staff leave request handling?">
+                    🧑‍✈️ Staff Support Portal
+                </button>
+                <button class="prompt-btn" data-prompt="Check flight status for KQ 100">
+                    🕒 Flight Status
+                </button>
+            </div>
+
+            <div class="system-status-card">
+                <span class="status-indicator online"></span>
+                <div class="status-info">
+                    <p class="status-title">System Status</p>
+                    <p class="status-sub">Operational | v1.0.0</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-viewport">
+            <header class="chat-header">
+                <div>
+                    <h1 id="main-header-title">Kenya Airways Centralized AI Assistant</h1>
+                    <p>Automated Customer & Staff Support Engine</p>
+                </div>
+            </header>
+
+            <section class="messages-container" id="chat-messages">
+                <div class="message system-message">
+                    <div class="avatar">KQ</div>
+                    <div class="bubble">
+                        Jambo! Welcome to the Kenya Airways Centralized AI Assistant. How can I help you with customer or operational support today?
+                    </div>
+                </div>
+            </section>
+
+            <footer class="chat-input-area">
+                <form id="chat-form">
+                    <input 
+                        type="text" 
+                        id="user-input" 
+                        placeholder="Type your query (e.g., flight status, baggage rules, staff policy)..." 
+                        required 
+                        autocomplete="off"
+                    />
+                    <button type="submit" id="send-btn">Send</button>
+                </form>
+            </footer>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
