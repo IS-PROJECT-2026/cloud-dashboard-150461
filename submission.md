@@ -1,49 +1,91 @@
-# Final Practical Assignment: Git Workflow & DevOps Submission
+# Project Submission Report
 
-## Student & Repository Details
-* **Student Name:** Rombosia Kevin Mandela
-* **Admission Number:** 150461
-* **Course:** IS PROJECT 2026
-* **Class Section Team:** GROUP 4E
-* **Repository Name:** cloud-dashboard-150461
-* **Organization Namespace:** IS-PROJECT-2026
+## 1. Student Details
+
+* **Full Name:** Rombosia Kevin Mandela
+* **GitHub Username:** KMandela2003
+* **Email:** kevin.mandela@strathmore.edu
+
+---
+
+## 2. Deployed Project Link
+
 * **Live GitHub Pages URL:** https://IS-PROJECT-2026.github.io/cloud-dashboard-150461/
 
 ---
 
-## Technical Architectural Overview
-This system serves as a static web dashboard interface for the **Kenya Airways Centralized AI Assistant**. Built using HTML5, modern CSS flexbox layouts, and modular vanilla JavaScript, the application acts as an automated query resolution hub for customer and operational inquiries.
+## 3. Reflection — Grounded in Your Git History
 
-Key architecture components:
-1. `index.html`: Absolute root entry point serving as the static layout container for GitHub Pages compilation.
-2. `style.css`: Modern dark-theme aesthetic styled around Kenya Airways branding palettes using custom CSS variables.
-3. `app.js`: Client-side query parser and keyword matching engine providing real-time response dispatch for baggage, flight status, and HR support queries.
+### A. Your Best Commit
+* **Commit URL:** https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/commit/feat/1-base-layout
+* **Why this one?** This commit demonstrates strict adherence to the Conventional Commits specification by using the `feat(ui)` semantic scope, keeping the subject line under 50 characters in the imperative mood, providing a clear structural explanation in the body, and cleanly linking to close issue `#1` in the footer.
+
+### B. A Mistake or Struggle
+* **Link to the evidence:** https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/compare/feat/1-base-layout...feat/1-base-layout
+* **What happened and how did you recover?** When creating the initial Pull Request for `feat/1-base-layout`, the comparison branch was accidentally set to compare against itself rather than `main`, resulting in an empty diff and a disabled merge button. I recovered by adjusting the PR base branch target back to `main` and explicitly pushing `main` upstream to establish the remote tracking branch properly.
+
+### C. A Pull Request You're Proud Of
+* **PR URL:** https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/pull/2
+* **What did you check before merging?** Before executing the merge, I verified that the PR diff correctly contained varied conventional commit types (`style`, `feat`, `docs`), ensured that `app.js` contained proper exception handling for keyword matching, and confirmed that the description explicitly included the `Closes #2` directive for issue closure traceability.
+
+### D. One Thing You Would Do Differently
+* **What would you change?** If restarting from scratch, I would establish the branch protection rule on `main` immediately *after* the initial repository initialization commit rather than before pushing `main` upstream, avoiding premature target comparison errors during initial setup.
+* **Link to the evidence of the original decision:** https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/settings/branches
 
 ---
 
-## DevOps & Workflow Implementation Summary
+## 4. Screenshots of Key GitHub Features
 
-### 1. Agile Project Management
-* **Milestones:** Defined 3 distinct milestones (`v1.0-Core-Architecture`, `v1.1-Metrics-Engine`, `v1.2-DevOps-CI/CD`).
-* **Issues:** Granular tasks were created, assigned, and explicitly linked to milestones before code development.
-* **Kanban Tracking:** Tasks were systematically progressed through `To Do`, `In Progress`, and `Done` columns on the repository project board.
+### A. Milestones and Issues
+![Milestones and Issues](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/milestones_issues.png)  
+**Caption:** Active project milestones (`v1.0-Core-Architecture`, `v1.1-Metrics-Engine`, `v1.2-DevOps-CI/CD`) mapping out granular technical issues prior to code implementation.
 
-### 2. Git Branching & Protection Rules
-* Committing directly to `main` was completely restricted. All development occurred on isolated feature branches (`feat/*`, `style/*`, `docs/*`, `fix/*`).
-* Main branch protection rules were enforced requiring Pull Requests prior to code integration while keeping explicit approval enforcing disabled to allow solo developer PR merges.
+### B. Project Board
+![Project Board](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/project_board.png)  
+**Caption:** Active Kanban project board displaying task progression dynamically across `To Do`, `In Progress`, and `Done` status columns.
 
-### 3. Conventional Commit History
-Semantic commit voice was enforced across all merges, utilizing key imperative commit types:
-* `feat`: Introduced structural UI elements and client-side message parsing logic.
-* `style`: Enhanced layout spacing, border radii, and visual dark theme tokens.
-* `docs`: Built system documentation in `README.md` and finalized theoretical assessment in `submission.md`.
-* `fix`: Resolved local line collisions and integrated visual merge conflict evidence.
+### C. Branching Architecture
+![Branching Architecture](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/branch_list.png)  
+**Caption:** Remote branch listing showcasing conventional, issue-linked feature branch naming conventions (`feat/*`, `docs/*`, `style/*`).
 
-### 4. Merge Conflict Engineering & Resolution
-A local merge conflict was engineered on line 15 of `index.html` across two isolated feature branches (`feat/3-header-variant-a` and `feat/3-header-variant-b`).
-* Collision was captured via native VS Code conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`).
-* Visual evidence was captured and stored strictly at `/evidence/conflict_evidence.png`.
-* Resolution was completed manually, staged, committed, and safely merged into production.
+### D. Pull Requests & Traceability
+![Pull Requests](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/pull_request.png)  
+**Caption:** Merged Pull Request #2 demonstrating clear code diffs and explicit linking to automatically close issue #2.
 
-### 5. Automated CI/CD
-Automated static compilation and continuous deployment were configured via GitHub Pages pointing directly to the root folder on `main`. Every merged PR automatically triggers deployment pipelines.
+---
+
+## 5. Merge Conflict Evidence
+
+### Conflict 1 — Full Chronology
+
+* **What cause did you use?** Concurrent modification of the exact same line in a shared file across two parallel feature branches (`feat/3-header-variant-a` and `feat/3-header-variant-b`).
+
+#### Step 1: Generating the Clash
+![Merge Warning](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict1_merge_warning.png)  
+**Caption:** Terminal output demonstrating a failed local merge attempt due to line 15 content collisions between `origin/main` and `feat/3-header-variant-b`.
+
+#### Step 2: Inside the Code Editor (Conflict Markers)
+![Conflict Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict_evidence.png)  
+**Caption:** Raw conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) inside VS Code displaying competing modifications for the main landing `<h1>` title element.
+
+#### Step 3: Resolution & Clean Merge
+![Clean Resolution](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict1_resolution.png)  
+**Caption:** Clean Git graph and PR history following manual marker resolution, staging, and final merge into `main`.
+
+---
+
+### Conflict 2 — Different Cause
+
+* **What cause did you use?** Structural file relocation vs. in-place content modification (File moved/renamed in Branch A while modified in Branch B).
+* **Why does this cause trigger a conflict?** Git's 3-way merge engine cannot automatically resolve whether to apply line edits to the original file path or propagate them into the newly relocated file path, forcing a manual structural decision.
+![Conflict 2 Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict2_markers.png)  
+**Caption:** Conflict markers triggered when merging edits made to `style.css` while parallel branch moved it into a `/css` subfolder.
+
+---
+
+### Conflict 3 — Different Cause
+
+* **What cause did you use?** Upstream file deletion vs. downstream feature edit (File deleted in `main` while modified in feature branch).
+* **Why does this cause trigger a conflict?** Git cannot automatically determine whether the file should be permanently removed from tracking or retained with the newly added feature modifications.
+![Conflict 3 Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict3_markers.png)  
+**Caption:** Terminal conflict warning when attempting to merge a feature branch modifying a config file that was deleted in `main`.
