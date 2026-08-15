@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     ];
 
-    const defaultResponse = "Thank you for reaching out to Kenya Airways Support. Your query has been logged into our support queue. An agent or automated system will assist you further.";
+    const defaultResponse = "Thank you for reaching out to Kenya Airways Support. Your query has been logged into our support queue. An agent or automated system will guide you further.";
 
     // Handle Form Submit
     chatForm.addEventListener('submit', (e) => {
