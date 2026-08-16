@@ -4,7 +4,8 @@
 
 * **Full Name:** Rombosia Kevin Mandela
 * **GitHub Username:** KMandela2003
-* **Email:** kevin.mandela@strathmore.edu
+* **Email:** kevin.rombosia@strathmore.edu
+* **Admission No:** 150461
 
 ---
 
