@@ -37,19 +37,19 @@
 ## 4. Screenshots of Key GitHub Features
 
 ### A. Milestones and Issues
-![Milestones and Issues](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/milestones_issues.png)  
+![Milestones and Issues](evidence/milestones_issues.png)  
 **Caption:** Active project milestones (`v1.0-Core-Architecture`, `v1.1-Metrics-Engine`, `v1.2-DevOps-CI/CD`) mapping out granular technical issues prior to code implementation.
 
 ### B. Project Board
-![Project Board](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/project_board.png)  
+![Project Board](evidence/project_board.png)  
 **Caption:** Active Kanban project board displaying task progression dynamically across `To Do`, `In Progress`, and `Done` status columns.
 
 ### C. Branching Architecture
-![Branching Architecture](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/branch_list.png)  
+![Branching Architecture](evidence/branch_list.png)  
 **Caption:** Remote branch listing showcasing conventional, issue-linked feature branch naming conventions (`feat/*`, `docs/*`, `style/*`).
 
 ### D. Pull Requests & Traceability
-![Pull Requests](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/pull_request.png)  
+![Pull Requests](evidence/pull_request.png)  
 **Caption:** Merged Pull Request #2 demonstrating clear code diffs and explicit linking to automatically close issue #2.
 
 ---
@@ -61,31 +61,16 @@
 * **What cause did you use?** Concurrent modification of the exact same line in a shared file across two parallel feature branches (`feat/3-header-variant-a` and `feat/3-header-variant-b`).
 
 #### Step 1: Generating the Clash
-![Merge Warning](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict1_merge_warning.png)  
+![Merge Warning](evidence/merge_warning.png)  
 **Caption:** Terminal output demonstrating a failed local merge attempt due to line 15 content collisions between `origin/main` and `feat/3-header-variant-b`.
 
 #### Step 2: Inside the Code Editor (Conflict Markers)
-![Conflict Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict_evidence.png)  
+![Conflict Markers](evidence/conflict_evidence.png)  
 **Caption:** Raw conflict markers (`<<<<<<< HEAD`, `=======`, `>>>>>>>`) inside VS Code displaying competing modifications for the main landing `<h1>` title element.
 
 #### Step 3: Resolution & Clean Merge
-![Clean Resolution](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict1_resolution.png)  
+![Clean Resolution](evidence/conflict1_resolution.png)  
 **Caption:** Clean Git graph and PR history following manual marker resolution, staging, and final merge into `main`.
 
 ---
 
-### Conflict 2 — Different Cause
-
-* **What cause did you use?** Structural file relocation vs. in-place content modification (File moved/renamed in Branch A while modified in Branch B).
-* **Why does this cause trigger a conflict?** Git's 3-way merge engine cannot automatically resolve whether to apply line edits to the original file path or propagate them into the newly relocated file path, forcing a manual structural decision.
-![Conflict 2 Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict2_markers.png)  
-**Caption:** Conflict markers triggered when merging edits made to `style.css` while parallel branch moved it into a `/css` subfolder.
-
----
-
-### Conflict 3 — Different Cause
-
-* **What cause did you use?** Upstream file deletion vs. downstream feature edit (File deleted in `main` while modified in feature branch).
-* **Why does this cause trigger a conflict?** Git cannot automatically determine whether the file should be permanently removed from tracking or retained with the newly added feature modifications.
-![Conflict 3 Markers](https://github.com/IS-PROJECT-2026/cloud-dashboard-150461/raw/main/evidence/conflict3_markers.png)  
-**Caption:** Terminal conflict warning when attempting to merge a feature branch modifying a config file that was deleted in `main`.
